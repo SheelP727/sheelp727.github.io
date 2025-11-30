@@ -4,18 +4,20 @@
   <meta charset="UTF-8" />
   <title>Sheel Patel | Strategy, MedTech, Clinical Research</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!-- Minimalist, clean font -->
+  <!-- Clean, academic font -->
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet" />
   <style>
     * {
       box-sizing: border-box;
     }
 
-    body {
+    html, body {
       margin: 0;
+      padding: 0;
       font-family: "Source Sans 3", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       background: #f5f5f5;
       color: #111111;
+      scroll-behavior: smooth;
     }
 
     a {
@@ -28,14 +30,32 @@
       border-bottom-color: #111111;
     }
 
+    /* Scroll progress bar (cool feature) */
+    .progress-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: #e5e5e5;
+      z-index: 50;
+    }
+
+    .progress-bar {
+      height: 100%;
+      width: 0;
+      background: #111111;
+      transform-origin: left center;
+    }
+
     /* Top nav */
     .top-nav {
       width: 100%;
       background: #ffffff;
       border-bottom: 1px solid #e5e5e5;
       position: sticky;
-      top: 0;
-      z-index: 20;
+      top: 3px; /* below progress bar */
+      z-index: 40;
     }
 
     .top-nav-inner {
@@ -91,7 +111,6 @@
     /* Sidebar */
     .sidebar {
       background: #ffffff;
-      color: #111111;
       border-radius: 10px;
       padding: 24px 20px 20px;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
@@ -210,6 +229,12 @@
       font-weight: 600;
     }
 
+    h3 {
+      font-size: 15px;
+      margin: 14px 0 4px;
+      font-weight: 600;
+    }
+
     .section {
       font-size: 14px;
       color: #333333;
@@ -225,85 +250,47 @@
       margin-bottom: 6px;
     }
 
-    .current-projects-list li {
-      margin-bottom: 8px;
+    .two-col {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 10px;
+    }
+
+    .entry-meta {
+      font-size: 13px;
+      color: #555555;
+    }
+
+    .tagline-strong {
+      font-weight: 600;
     }
 
     .honors-list li {
       margin-bottom: 6px;
     }
 
-    .footer {
-      margin-top: 18px;
+    /* Back to top button (part of cool feature) */
+    .back-to-top {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      padding: 7px 12px;
       font-size: 12px;
-      color: #777777;
-      text-align: right;
+      border-radius: 999px;
+      border: 1px solid #111111;
+      background: #ffffff;
+      color: #111111;
+      cursor: pointer;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s ease, transform 0.2s ease;
     }
-  </style>
-</head>
-<body>
-  <!-- Top navigation -->
-  <div class="top-nav">
-    <div class="top-nav-inner">
-      <div class="top-nav-title">Sheel Patel · Strategy · MedTech · Clinical Research</div>
-      <nav class="top-nav-links">
-        <a href="#profile">Profile</a>
-        <a href="#projects">Current Projects</a>
-        <a href="#research-profiles">Research Profiles</a>
-        <a href="#honors">Honors</a>
-        <a href="#highlights">Research Highlights</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </div>
 
-  <div class="page">
-    <!-- Sidebar -->
-    <aside class="sidebar" id="profile">
-      <div class="avatar-shell">
-        <div class="avatar">
-          <!-- Uses the raw file URL so it always loads -->
-          <img src="https://raw.githubusercontent.com/SheelP727/sheelpatel.github.io/main/profile.jpg"
-               alt="Portrait of Sheel Patel" />
-        </div>
-      </div>
+    .back-to-top.visible {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
 
-      <div class="sidebar-name">Sheel Patel</div>
-      <div class="sidebar-subtitle">
-        UPenn '28 · Ben Franklin Scholar<br />
-        Health and Societies (Healthcare Markets &amp; Finance)<br />
-        Nutrition Science · Chemistry minor
-      </div>
-
-      <div class="sidebar-email">
-        <a href="mailto:sheelp@sas.upenn.edu">sheelp@sas.upenn.edu</a>
-      </div>
-
-      <div class="sidebar-links">
-        <a href="https://www.linkedin.com/in/sheelpatelnc" target="_blank" rel="noreferrer">LinkedIn</a>
-        <a href="#coursework">Coursework</a>
-      </div>
-
-      <div class="sidebar-section-title">Focus areas</div>
-      <ul class="sidebar-list">
-        <li>Clinical research in pediatric hypertension and nephrology</li>
-        <li>Digital health and medtech strategy</li>
-        <li>Global health and sustainability</li>
-      </ul>
-
-      <div class="sidebar-section-title">Current roles</div>
-      <ul class="sidebar-list">
-        <li>Clinical Research Assistant – Nephrology @ CHOP</li>
-        <li>Co-Founder – Vitality Labs (digital health)</li>
-        <li>Head of Finance – GlobeMed at Penn</li>
-        <li>Senior Consultant – WUCC and MUSE</li>
-      </ul>
-
-      <span class="sidebar-badge">Open to strategy, research, and medtech collaborations</span>
-    </aside>
-
-    <!-- Main content -->
-    <main class="content">
-      <section class="intro">
-        Sheel Patel is a Ben Franklin Scholar at the University of Pennsylvania and an undergraduate in
-        Health and Societies with a concentration in Healthca
+    .back-to-top.hidden {
+      transform: translateY(8px);
