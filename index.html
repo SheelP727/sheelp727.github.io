@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Sheel Patel | Strategy, MedTech, Clinical Research</title>
+  <title>Sheel Patel </title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <!-- Clean, academic fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
@@ -295,6 +295,59 @@
       margin-bottom: 6px;
     }
 
+    /* Airtable-like courses table */
+    .courses-wrapper {
+      margin-top: 10px;
+      background: rgba(15, 23, 42, 0.95);
+      border-radius: 12px;
+      padding: 12px;
+      border: 1px solid #1f2937;
+      overflow-x: auto;
+    }
+
+    .courses-table {
+      width: 100%;
+      min-width: 560px;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+
+    .courses-table thead th {
+      text-align: left;
+      padding: 8px 10px;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #9ca3af;
+      background: #020617;
+      border-bottom: 1px solid #1f2937;
+    }
+
+    .courses-table tbody td {
+      padding: 8px 10px;
+      border-bottom: 1px solid #111827;
+      color: #e5e7eb;
+    }
+
+    .courses-table tbody tr:hover {
+      background: rgba(30, 64, 175, 0.35);
+    }
+
+    .pill {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-size: 11px;
+      border: 1px solid #1f2937;
+      background: rgba(15, 23, 42, 0.9);
+    }
+
+    .pill-status {
+      border-color: rgba(45, 212, 191, 0.4);
+      background: rgba(15, 118, 110, 0.25);
+      color: #a5f3fc;
+    }
+
     /* Back to top button */
     .back-to-top {
       position: fixed;
@@ -378,9 +431,10 @@
         Nutrition Science · Chemistry minor
       </div>
 
+      <!-- CHANGE #1: Experience -> Courses -->
       <div class="sidebar-links">
         <a href="https://www.linkedin.com/in/sheelpatelnc" target="_blank" rel="noreferrer">LinkedIn</a>
-        <a href="#work">Experience</a>
+        <a href="#courses">Courses</a>
       </div>
 
       <div class="sidebar-section-title">Focus areas</div>
@@ -420,6 +474,205 @@
           questions of adoption, market entry, and system design. Long term, I hope to train as a physician while
           shaping the infrastructure that makes high-quality care sustainable and accessible.
         </p>
+      </section>
+
+      <!-- CHANGE #2: COURSES SECTION -->
+      <section id="courses" class="section">
+        <h2>Undergraduate Courses</h2>
+        <p class="intro">
+          A snapshot of my completed, in-progress, and transfer undergraduate coursework at Penn, formatted in an
+          Airtable-style grid.
+        </p>
+        <div class="courses-wrapper">
+          <table class="courses-table">
+            <thead>
+              <tr>
+                <th>Course ID</th>
+                <th>Course Name</th>
+                <th>Status</th>
+                <th>Credits</th>
+                <th>Grade</th>
+              </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td>WRIT 0130</td>
+              <td>Critical Writing Seminar in</td>
+              <td><span class="pill pill-status">Completed</span></td>
+              <td>1.00</td>
+              <td>A</td>
+            </tr>
+            <tr>
+              <td>STSC 1151</td>
+              <td>Modern Biology and Social</td>
+              <td><span class="pill pill-status">Completed</span></td>
+              <td>1.00</td>
+              <td>A</td>
+            </tr>
+            <tr>
+              <td>MATH 1400</td>
+              <td>Calculus I</td>
+              <td><span class="pill pill-status">Transfer</span></td>
+              <td>1.00</td>
+              <td>TR</td>
+            </tr>
+            <tr>
+              <td>MKTG 2250</td>
+              <td>Principles of Retailing</td>
+              <td><span class="pill pill-status">Completed</span></td>
+              <td>0.50</td>
+              <td>A</td>
+            </tr>
+            <tr>
+              <td>CHEM 2410</td>
+              <td>Principles of Organic</td>
+              <td><span class="pill pill-status">In Progress</span></td>
+              <td>1.00</td>
+              <td>IN PROGRESS</td>
+            </tr>
+            <tr>
+              <td>CHEM 1011</td>
+              <td>Introduction to General</td>
+              <td><span class="pill pill-status">Completed</span></td>
+              <td>1.00</td>
+              <td>A-</td>
+            </tr>
+            <tr>
+              <td>CHEM 2451</td>
+              <td>Experimental Organic</td>
+              <td><span class="pill pill-status">In Progress</span></td>
+              <td>0.50</td>
+              <td>IN PROGRESS</td>
+            </tr>
+            <tr>
+              <td>CHEM 1101</td>
+              <td>General Chemistry Laboratory I</td>
+              <td><span class="pill pill-status">Completed</span></td>
+              <td>0.50</td>
+              <td>A</td>
+            </tr>
+            <tr>
+              <td>HCMG 1010</td>
+              <td>Health Care Systems</td>
+              <td><span class="pill pill-status">In Progress</span></td>
+              <td>1.00</td>
+              <td>IN PROGRESS</td>
+            </tr>
+            <tr>
+              <td>INTG 0001</td>
+              <td>Integrated Studies I: The</td>
+              <td><span class="pill pill-status">Completed</span></td>
+              <td>2.00</td>
+              <td>A</td>
+            </tr>
+            <tr>
+              <td>HIST 0811</td>
+              <td>Faculty-Student Collaborative</td>
+              <td><span class="pill pill-status">In Progress</span></td>
+              <td>1.00</td>
+              <td>IN PROGRESS</td>
+            </tr>
+            <tr>
+              <td>SPAN 0400</td>
+              <td>Intermediate Spanish II</td>
+              <td><span class="pill pill-status">Completed</span></td>
+              <td>1.00</td>
+              <td>A</td>
+            </tr>
+            <tr>
+              <td>HSOC 0400</td>
+              <td>Medicine in History</td>
+              <td><span class="pill pill-status">In Progress</span></td>
+              <td>1.00</td>
+              <td>IN PROGRESS</td>
+            </tr>
+            <tr>
+              <td>MUSC 1700</td>
+              <td>Introduction to Theory and</td>
+              <td><span class="pill pill-status">In Progress</span></td>
+              <td>1.00</td>
+              <td>IN PROGRESS</td>
+            </tr>
+            <tr>
+              <td>CHEM 1022</td>
+              <td>General Chemistry II</td>
+              <td><span class="pill pill-status">Completed</span></td>
+              <td>1.00</td>
+              <td>A-</td>
+            </tr>
+            <tr>
+              <td>CHEM 1102</td>
+              <td>General Chemistry Laboratory</td>
+              <td><span class="pill pill-status">Completed</span></td>
+              <td>0.50</td>
+              <td>A</td>
+            </tr>
+            <tr>
+              <td>HSOC 0480</td>
+              <td>Health and Societies</td>
+              <td><span class="pill pill-status">Completed</span></td>
+              <td>1.00</td>
+              <td>A</td>
+            </tr>
+            <tr>
+              <td>CHEM 2420</td>
+              <td>Principles of Organic</td>
+              <td><span class="pill pill-status">In Progress</span></td>
+              <td>1.00</td>
+              <td>IN PROGRESS</td>
+            </tr>
+            <tr>
+              <td>INTG 0002</td>
+              <td>Integrated Studies II:</td>
+              <td><span class="pill pill-status">Completed</span></td>
+              <td>2.00</td>
+              <td>A</td>
+            </tr>
+            <tr>
+              <td>CHEM 2452</td>
+              <td>Experimental Organic</td>
+              <td><span class="pill pill-status">In Progress</span></td>
+              <td>0.50</td>
+              <td>IN PROGRESS</td>
+            </tr>
+            <tr>
+              <td>HSOC 0600</td>
+              <td>Technology &amp; Society</td>
+              <td><span class="pill pill-status">In Progress</span></td>
+              <td>1.00</td>
+              <td>IN PROGRESS</td>
+            </tr>
+            <tr>
+              <td>HSOC 1222</td>
+              <td>Medical Sociology</td>
+              <td><span class="pill pill-status">In Progress</span></td>
+              <td>1.00</td>
+              <td>IN PROGRESS</td>
+            </tr>
+            <tr>
+              <td>HSOC 2002</td>
+              <td>Sociological Research Methods</td>
+              <td><span class="pill pill-status">In Progress</span></td>
+              <td>1.00</td>
+              <td>IN PROGRESS</td>
+            </tr>
+            <tr>
+              <td>NURS 1120</td>
+              <td>Nutrition: Sci &amp; Applica</td>
+              <td><span class="pill pill-status">In Progress</span></td>
+              <td>1.00</td>
+              <td>IN PROGRESS</td>
+            </tr>
+            <tr>
+              <td>STAT 1110</td>
+              <td>Introductory Statistics</td>
+              <td><span class="pill pill-status">In Progress</span></td>
+              <td>1.00</td>
+              <td>IN PROGRESS</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
       </section>
 
       <!-- RESEARCH EXPERIENCE -->
