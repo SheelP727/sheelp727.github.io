@@ -303,125 +303,25 @@
       margin-bottom: 6px;
     }
 
-    /* Airtable-like courses table (for modal) */
-    .courses-wrapper {
-      margin-top: 10px;
-      background: rgba(15, 23, 42, 0.95);
-      border-radius: 12px;
-      padding: 12px;
-      border: 1px solid #1f2937;
-      overflow-x: auto;
+    /* Relevant media list */
+    .media-list {
+      list-style: none;
+      padding-left: 0;
+      margin-top: 8px;
     }
 
-    .courses-table {
-      width: 100%;
-      min-width: 620px;
-      border-collapse: collapse;
-      font-size: 13px;
+    .media-list li {
+      margin-bottom: 10px;
     }
 
-    .courses-table thead th {
-      text-align: left;
-      padding: 8px 10px;
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: #9ca3af;
-      background: #020617;
-      border-bottom: 1px solid #1f2937;
-    }
-
-    .courses-table tbody td {
-      padding: 8px 10px;
-      border-bottom: 1px solid #111827;
-      color: #e5e7eb;
-    }
-
-    .courses-table tbody tr:hover {
-      background: rgba(30, 64, 175, 0.35);
-    }
-
-    .pill {
-      display: inline-block;
-      padding: 2px 8px;
-      border-radius: 999px;
-      font-size: 11px;
-      border: 1px solid #1f2937;
-      background: rgba(15, 23, 42, 0.9);
-    }
-
-    .pill-status {
-      border-color: rgba(45, 212, 191, 0.4);
-      background: rgba(15, 118, 110, 0.25);
-      color: #a5f3fc;
-    }
-
-    /* Modal for courses */
-    .modal-overlay {
-      position: fixed;
-      inset: 0;
-      background: rgba(15, 23, 42, 0.85);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.25s ease;
-      z-index: 60;
-    }
-
-    .modal-overlay.open {
-      opacity: 1;
-      pointer-events: auto;
-    }
-
-    .modal {
-      max-width: 960px;
-      width: 100%;
-      margin: 0 16px;
-      background: radial-gradient(circle at top left, rgba(59, 130, 246, 0.15), #020617);
-      border-radius: 14px;
-      border: 1px solid #1f2937;
-      box-shadow: 0 24px 70px rgba(0, 0, 0, 0.9);
-      padding: 18px 18px 20px;
-    }
-
-    .modal-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 6px;
-    }
-
-    .modal-title {
-      font-size: 17px;
+    .media-title {
       font-weight: 600;
-      color: #f9fafb;
-    }
-
-    .modal-close {
-      border: 1px solid #475569;
-      border-radius: 999px;
-      background: transparent;
       color: #e5e7eb;
-      width: 28px;
-      height: 28px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      font-size: 16px;
     }
 
-    .modal-close:hover {
-      background: rgba(15, 23, 42, 0.9);
-    }
-
-    .modal-subtext {
+    .media-meta {
       font-size: 13px;
       color: #9ca3af;
-      margin-bottom: 8px;
     }
 
     /* Back to top button */
@@ -478,6 +378,7 @@
         <a href="#about">About</a>
         <a href="#research">Research</a>
         <a href="#work">Work</a>
+        <a href="#media">Relevant Media</a>
         <a href="#talks">Talks</a>
         <a href="#honors">Honors</a>
         <a href="#contact">Contact</a>
@@ -490,7 +391,7 @@
     <aside class="sidebar">
       <div class="avatar-shell">
         <div class="avatar">
-          <img src="https://raw.githubusercontent.com/SheelP727/sheelpatel.github.io/main/profile.jpg"
+          <img src="https://raw.githubusercontent.com/SheelP727/sheelp727.github.io/main/profile.jpg"
                alt="Portrait of Sheel Patel" />
         </div>
       </div>
@@ -506,10 +407,10 @@
         Nutrition Science · Chemistry minor
       </div>
 
-      <!-- LinkedIn + Courses button -->
+      <!-- LinkedIn + Courses button (now separate tab/page) -->
       <div class="sidebar-links">
         <a href="https://www.linkedin.com/in/sheelpatelnc" target="_blank" rel="noreferrer">LinkedIn</a>
-        <button type="button" id="openCourses">Courses</button>
+        <a href="courses.html" target="_blank" rel="noreferrer">Courses</a>
       </div>
 
       <div class="sidebar-section-title">Focus areas</div>
@@ -604,6 +505,48 @@
         </ul>
       </section>
 
+      <!-- RELEVANT MEDIA -->
+      <section id="media" class="section">
+        <h2>Relevant Media</h2>
+        <ul class="media-list">
+          <li>
+            <div class="media-title">Factors Associated with White Coat Hypertension</div>
+            <div class="media-meta">
+              <a href="https://repository.upenn.edu/entities/publication/440920cf-8aca-40e2-8128-0e6a663a36cf"
+                 target="_blank" rel="noreferrer">Website</a>
+            </div>
+          </li>
+          <li>
+            <div class="media-title">Penn Data Science Fellow</div>
+            <div class="media-meta">
+              <a href="https://web.sas.upenn.edu/data-science/undergraduate-data-science-fellows/"
+                 target="_blank" rel="noreferrer">Website</a>
+            </div>
+          </li>
+          <li>
+            <div class="media-title">Rachel Carson Council – Cape Fear River Trip</div>
+            <div class="media-meta">
+              <a href="https://rachelcarsoncouncil.org/rcc-cape-fear-river-trip-exposes-enviva/"
+                 target="_blank" rel="noreferrer">Website</a>
+            </div>
+          </li>
+          <li>
+            <div class="media-title">WHQR Public Media – Community Opposition to Chemours Permit</div>
+            <div class="media-meta">
+              <a href="https://www.whqr.org/local/2022-06-22/community-members-voice-opposition-to-proposed-chemours-permit"
+                 target="_blank" rel="noreferrer">Website</a>
+            </div>
+          </li>
+          <li>
+            <div class="media-title">East Carolina University – Climate Change Research</div>
+            <div class="media-meta">
+              <a href="https://news.ecu.edu/2022/10/05/summer-ventures/"
+                 target="_blank" rel="noreferrer">Website</a>
+            </div>
+          </li>
+        </ul>
+      </section>
+
       <!-- TALKS & WORKSHOPS -->
       <section id="talks" class="section">
         <h2>Talks &amp; Workshop Interests</h2>
@@ -658,183 +601,6 @@
     </main>
   </div>
 
-  <!-- COURSES MODAL (opens from sidebar button) -->
-  <div class="modal-overlay" id="coursesModal" aria-hidden="true">
-    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="coursesTitle">
-      <div class="modal-header">
-        <div class="modal-title" id="coursesTitle">Undergraduate Courses</div>
-        <button class="modal-close" id="closeCourses" aria-label="Close courses dialog">×</button>
-      </div>
-      <p class="modal-subtext">
-        A snapshot of completed, in-progress, and transfer coursework at Penn, shown in an Airtable-style grid.
-      </p>
-      <div class="courses-wrapper">
-        <table class="courses-table">
-          <thead>
-            <tr>
-              <th>Course ID</th>
-              <th>Course Name</th>
-              <th>Status</th>
-              <th>Credits</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>WRIT 0130</td>
-              <td>Critical Writing Seminar in ANTH: Global Health</td>
-              <td><span class="pill pill-status">Completed</span></td>
-              <td>1.00</td>
-            </tr>
-            <tr>
-              <td>STSC 1151</td>
-              <td>Modern Biology and Social Implications</td>
-              <td><span class="pill pill-status">Completed</span></td>
-              <td>1.00</td>
-            </tr>
-            <tr>
-              <td>MATH 1400</td>
-              <td>Calculus I</td>
-              <td><span class="pill pill-status">Transfer</span></td>
-              <td>1.00</td>
-            </tr>
-            <tr>
-              <td>MKTG 2250</td>
-              <td>Principles of Retailing</td>
-              <td><span class="pill pill-status">Completed</span></td>
-              <td>0.50</td>
-            </tr>
-            <tr>
-              <td>CHEM 1011</td>
-              <td>Introduction to General Chemistry I</td>
-              <td><span class="pill pill-status">Completed</span></td>
-              <td>1.00</td>
-            </tr>
-            <tr>
-              <td>CHEM 1101</td>
-              <td>General Chemistry Laboratory I</td>
-              <td><span class="pill pill-status">Completed</span></td>
-              <td>0.50</td>
-            </tr>
-            <tr>
-              <td>INTG 0001</td>
-              <td>Integrated Studies I</td>
-              <td><span class="pill pill-status">Completed</span></td>
-              <td>2.00</td>
-            </tr>
-            <tr>
-              <td>SPAN 0400</td>
-              <td>Intermediate Spanish II</td>
-              <td><span class="pill pill-status">Completed</span></td>
-              <td>1.00</td>
-            </tr>
-            <tr>
-              <td>CHEM 1022</td>
-              <td>General Chemistry II</td>
-              <td><span class="pill pill-status">Completed</span></td>
-              <td>1.00</td>
-            </tr>
-            <tr>
-              <td>CHEM 1102</td>
-              <td>General Chemistry Laboratory II</td>
-              <td><span class="pill pill-status">Completed</span></td>
-              <td>0.50</td>
-            </tr>
-            <tr>
-              <td>HSOC 0480</td>
-              <td>Health and Societies</td>
-              <td><span class="pill pill-status">In Progress</span></td>
-              <td>1.00</td>
-            </tr>
-            <tr>
-              <td>INTG 0002</td>
-              <td>Integrated Studies II: History of the Environment</td>
-              <td><span class="pill pill-status">In Progress</span></td>
-              <td>2.00</td>
-            </tr>
-            <tr>
-              <td>CHEM 2410</td>
-              <td>Principles of Organic Chemistry I</td>
-              <td><span class="pill pill-status">In Progress</span></td>
-              <td>1.00</td>
-            </tr>
-            <tr>
-              <td>CHEM 2451</td>
-              <td>Experimental Organic Chemistry I</td>
-              <td><span class="pill pill-status">In Progress</span></td>
-              <td>0.50</td>
-            </tr>
-            <tr>
-              <td>HCMG 1010</td>
-              <td>Health Care Systems</td>
-              <td><span class="pill pill-status">In Progress</span></td>
-              <td>1.00</td>
-            </tr>
-            <tr>
-              <td>HIST 0811</td>
-              <td>Faculty-Student Collaborative Action Seminar in Urban University-Community Relations</td>
-              <td><span class="pill pill-status">In Progress</span></td>
-              <td>1.00</td>
-            </tr>
-            <tr>
-              <td>MUSC 1700</td>
-              <td>Introduction to Theory and Musicianship</td>
-              <td><span class="pill pill-status">In Progress</span></td>
-              <td>1.00</td>
-            </tr>
-            <tr>
-              <td>CHEM 2420</td>
-              <td>Principles of Organic Chemistry II</td>
-              <td><span class="pill pill-status">In Progress</span></td>
-              <td>1.00</td>
-            </tr>
-            <tr>
-              <td>CHEM 2452</td>
-              <td>Experimental Organic Chemistry II</td>
-              <td><span class="pill pill-status">In Progress</span></td>
-              <td>0.50</td>
-            </tr>
-            <tr>
-              <td>HSOC 0400</td>
-              <td>Medicine in History</td>
-              <td><span class="pill pill-status">In Progress</span></td>
-              <td>1.00</td>
-            </tr>
-            <tr>
-              <td>HSOC 0600</td>
-              <td>Technology &amp; Society</td>
-              <td><span class="pill pill-status">In Progress</span></td>
-              <td>1.00</td>
-            </tr>
-            <tr>
-              <td>HSOC 1222</td>
-              <td>Medical Sociology</td>
-              <td><span class="pill pill-status">In Progress</span></td>
-              <td>1.00</td>
-            </tr>
-            <tr>
-              <td>HSOC 2002</td>
-              <td>Sociological Research Methods</td>
-              <td><span class="pill pill-status">In Progress</span></td>
-              <td>1.00</td>
-            </tr>
-            <tr>
-              <td>NURS 1120</td>
-              <td>Nutrition: Science &amp; Applications</td>
-              <td><span class="pill pill-status">In Progress</span></td>
-              <td>1.00</td>
-            </tr>
-            <tr>
-              <td>STAT 1110</td>
-              <td>Introductory Statistics</td>
-              <td><span class="pill pill-status">In Progress</span></td>
-              <td>1.00</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </div>
-
   <!-- Back to top button -->
   <button id="backToTop" class="back-to-top hidden" type="button">Back to top</button>
 
@@ -870,48 +636,6 @@
 
       backToTop.addEventListener("click", function () {
         window.scrollTo({ top: 0, behavior: "smooth" });
-      });
-    })();
-
-    // Courses modal open/close logic
-    (function () {
-      const openBtn = document.getElementById("openCourses");
-      const modal = document.getElementById("coursesModal");
-      const closeBtn = document.getElementById("closeCourses");
-
-      if (!openBtn || !modal || !closeBtn) return;
-
-      function openModal() {
-        modal.classList.add("open");
-        modal.setAttribute("aria-hidden", "false");
-        document.body.style.overflow = "hidden";
-      }
-
-      function closeModal() {
-        modal.classList.remove("open");
-        modal.setAttribute("aria-hidden", "true");
-        document.body.style.overflow = "";
-      }
-
-      openBtn.addEventListener("click", function (e) {
-        e.preventDefault();
-        openModal();
-      });
-
-      closeBtn.addEventListener("click", function () {
-        closeModal();
-      });
-
-      modal.addEventListener("click", function (e) {
-        if (e.target === modal) {
-          closeModal();
-        }
-      });
-
-      document.addEventListener("keydown", function (e) {
-        if (e.key === "Escape") {
-          closeModal();
-        }
       });
     })();
   </script>
