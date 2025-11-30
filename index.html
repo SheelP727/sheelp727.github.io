@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <title>Sheel Patel | Strategy, MedTech, Clinical Research</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Minimalist, clean font -->
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet" />
   <style>
     * {
       box-sizing: border-box;
@@ -11,27 +13,26 @@
 
     body {
       margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: radial-gradient(circle at top left, #1e293b 0, #020617 40%, #000 100%);
-      color: #0f172a;
+      font-family: "Source Sans 3", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #f5f5f5;
+      color: #111111;
     }
 
     a {
-      color: #2563eb;
+      color: #111111;
       text-decoration: none;
+      border-bottom: 1px solid transparent;
     }
 
     a:hover {
-      text-decoration: underline;
+      border-bottom-color: #111111;
     }
 
     /* Top nav */
     .top-nav {
       width: 100%;
-      background: rgba(15, 23, 42, 0.9);
-      color: #e5e7eb;
-      border-bottom: 1px solid rgba(148, 163, 184, 0.4);
-      backdrop-filter: blur(14px);
+      background: #ffffff;
+      border-bottom: 1px solid #e5e5e5;
       position: sticky;
       top: 0;
       z-index: 20;
@@ -40,7 +41,7 @@
     .top-nav-inner {
       max-width: 1120px;
       margin: 0 auto;
-      padding: 8px 16px;
+      padding: 10px 16px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -51,6 +52,7 @@
       font-weight: 600;
       letter-spacing: 0.03em;
       font-size: 15px;
+      text-transform: uppercase;
     }
 
     .top-nav-links {
@@ -61,14 +63,13 @@
     }
 
     .top-nav-links a {
-      color: #cbd5f5;
-      padding: 4px 10px;
+      padding: 4px 8px;
       border-radius: 999px;
     }
 
     .top-nav-links a:hover {
-      background: rgba(148, 163, 184, 0.25);
-      text-decoration: none;
+      background: #f0f0f0;
+      border-bottom-color: transparent;
     }
 
     /* Layout */
@@ -89,12 +90,12 @@
 
     /* Sidebar */
     .sidebar {
-      background: rgba(15, 23, 42, 0.95);
-      color: #e5e7eb;
-      border-radius: 18px;
+      background: #ffffff;
+      color: #111111;
+      border-radius: 10px;
       padding: 24px 20px 20px;
-      box-shadow: 0 22px 60px rgba(0, 0, 0, 0.7);
-      border: 1px solid rgba(148, 163, 184, 0.45);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+      border: 1px solid #e5e5e5;
     }
 
     .avatar-shell {
@@ -103,19 +104,12 @@
       margin-bottom: 18px;
     }
 
-    .avatar-ring {
-      padding: 4px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #2563eb, #ef4444);
-      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.7);
-    }
-
     .avatar {
       width: 150px;
       height: 150px;
       border-radius: 50%;
       overflow: hidden;
-      background: #020617;
+      border: 3px solid #000000;
     }
 
     .avatar img {
@@ -123,6 +117,7 @@
       height: 100%;
       display: block;
       object-fit: cover;
+      filter: grayscale(100%);
     }
 
     .sidebar-name {
@@ -132,26 +127,18 @@
       margin-bottom: 4px;
     }
 
-    .sidebar-name span {
-      color: #f97373;
-    }
-
     .sidebar-subtitle {
       text-align: center;
       font-size: 13px;
-      color: #9ca3af;
+      color: #555555;
       margin-bottom: 16px;
+      line-height: 1.5;
     }
 
     .sidebar-email {
       text-align: center;
       font-size: 13px;
       margin-bottom: 16px;
-    }
-
-    .sidebar-email a {
-      color: #93c5fd;
-      word-break: break-all;
     }
 
     .sidebar-links {
@@ -165,16 +152,15 @@
       align-items: center;
       gap: 6px;
       margin: 0 6px;
-      color: #cbd5f5;
     }
 
     .sidebar-section-title {
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 600;
       margin: 18px 0 6px;
       text-transform: uppercase;
       letter-spacing: 0.08em;
-      color: #9ca3af;
+      color: #666666;
     }
 
     .sidebar-list {
@@ -182,7 +168,8 @@
       padding: 0;
       margin: 0;
       font-size: 13px;
-      color: #e5e7eb;
+      color: #333333;
+      line-height: 1.5;
     }
 
     .sidebar-list li {
@@ -191,59 +178,51 @@
 
     .sidebar-badge {
       display: inline-block;
-      margin-top: 10px;
+      margin-top: 12px;
       font-size: 11px;
-      padding: 3px 8px;
+      padding: 4px 10px;
       border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.7);
-      color: #e5e7eb;
+      border: 1px solid #111111;
     }
 
     /* Main content */
     .content {
-      background: rgba(248, 250, 252, 0.98);
-      border-radius: 18px;
+      background: #ffffff;
+      border-radius: 10px;
       padding: 24px 22px 26px;
-      box-shadow: 0 22px 60px rgba(15, 23, 42, 0.75);
-      border: 1px solid rgba(148, 163, 184, 0.35);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+      border: 1px solid #e5e5e5;
     }
 
     .intro {
       font-size: 14px;
-      color: #4b5563;
+      color: #333333;
       margin-bottom: 20px;
+      line-height: 1.6;
     }
 
     h2 {
-      font-size: 18px;
-      border-bottom: 1px solid #e5e7eb;
+      font-size: 17px;
+      border-bottom: 1px solid #e5e5e5;
       padding-bottom: 4px;
       margin: 22px 0 10px;
-      color: #111827;
-    }
-
-    h3 {
-      font-size: 15px;
-      margin: 12px 0 4px;
-      color: #111827;
+      color: #111111;
+      font-weight: 600;
     }
 
     .section {
       font-size: 14px;
-      color: #4b5563;
+      color: #333333;
+      line-height: 1.6;
     }
 
     .section ul {
       padding-left: 18px;
+      margin-top: 4px;
     }
 
     .section li {
       margin-bottom: 6px;
-    }
-
-    .tagline-strong {
-      font-weight: 600;
-      color: #111827;
     }
 
     .current-projects-list li {
@@ -257,7 +236,7 @@
     .footer {
       margin-top: 18px;
       font-size: 12px;
-      color: #9ca3af;
+      color: #777777;
       text-align: right;
     }
   </style>
@@ -282,19 +261,18 @@
     <!-- Sidebar -->
     <aside class="sidebar" id="profile">
       <div class="avatar-shell">
-        <div class="avatar-ring">
-          <div class="avatar">
-            <!-- Direct link to the image in this repo -->
-            <img src="https://raw.githubusercontent.com/SheelP727/sheelpatel.github.io/main/profile.jpg"
-                 alt="Portrait of Sheel Patel" />
-          </div>
+        <div class="avatar">
+          <!-- Uses the raw file URL so it always loads -->
+          <img src="https://raw.githubusercontent.com/SheelP727/sheelpatel.github.io/main/profile.jpg"
+               alt="Portrait of Sheel Patel" />
         </div>
       </div>
 
-      <div class="sidebar-name"><span>Sheel</span> Patel</div>
+      <div class="sidebar-name">Sheel Patel</div>
       <div class="sidebar-subtitle">
         UPenn '28 · Ben Franklin Scholar<br />
-        Health and Societies · Nutrition Science · Chemistry minor
+        Health and Societies (Healthcare Markets &amp; Finance)<br />
+        Nutrition Science · Chemistry minor
       </div>
 
       <div class="sidebar-email">
@@ -315,10 +293,10 @@
 
       <div class="sidebar-section-title">Current roles</div>
       <ul class="sidebar-list">
-        <li>Clinical Research Assistant - Nephrology @ CHOP</li>
-        <li>Co-Founder - Vitality Labs (digital health)</li>
-        <li>Head of Finance - GlobeMed at Penn</li>
-        <li>Senior Consultant - WUCC and MUSE</li>
+        <li>Clinical Research Assistant – Nephrology @ CHOP</li>
+        <li>Co-Founder – Vitality Labs (digital health)</li>
+        <li>Head of Finance – GlobeMed at Penn</li>
+        <li>Senior Consultant – WUCC and MUSE</li>
       </ul>
 
       <span class="sidebar-badge">Open to strategy, research, and medtech collaborations</span>
@@ -328,134 +306,4 @@
     <main class="content">
       <section class="intro">
         Sheel Patel is a Ben Franklin Scholar at the University of Pennsylvania and an undergraduate in
-        Health and Societies with a concentration in Healthcare Markets and Finance, plus Nutrition Science and a
-        minor in Chemistry. His work sits at the intersection of
-        <span class="tagline-strong">strategy</span>,
-        <span class="tagline-strong">medtech</span>, and
-        <span class="tagline-strong">clinical research</span>,
-        with a particular interest in pediatric hypertension, kidney disease, and how digital tools can support
-        proactive, equitable care.
-      </section>
-
-      <!-- Current Projects -->
-      <section id="projects" class="section">
-        <h2>Current Projects</h2>
-        <ul class="current-projects-list">
-          <li>
-            <strong>Pediatric hypertension and ambulatory blood pressure monitoring (ABPM)</strong> -
-            Clinical Research Assistant in the CHOP Department of Nephrology, extracting and analyzing ABPM data and
-            EPIC charts for more than 500 pediatric patients to identify risk factors for white coat hypertension and
-            elevated blood pressure.
-          </li>
-          <li>
-            <strong>Vitality Labs - digital health and habit formation</strong> -
-            Co-founding a wellness platform that integrates wearables, behavioral nudging, and data visualization
-            to make long term habit change measurable and actionable.
-          </li>
-          <li>
-            <strong>Our Beautiful Earth - youth environmental advocacy</strong> -
-            Building a digital hub that has reached more than 2.5K users across eight countries, focused on climate
-            justice, actionable sustainability, and youth led organizing.
-          </li>
-          <li>
-            <strong>Global and community health work</strong> -
-            Preparing for Penn GRIP research in Monteverde, Costa Rica and reflecting on clinical shadowing through the
-            Atlantis Fellowship in Lisbon to compare care delivery across health systems.
-          </li>
-        </ul>
-      </section>
-
-      <!-- Research Profiles -->
-      <section id="research-profiles" class="section">
-        <h2>Research Profiles</h2>
-        <ul>
-          <li><a href="https://repository.upenn.edu" target="_blank" rel="noreferrer">ScholarlyCommons (Penn)</a></li>
-          <li><a href="https://pubmed.ncbi.nlm.nih.gov" target="_blank" rel="noreferrer">PubMed</a></li>
-          <li><a href="https://scholar.google.com" target="_blank" rel="noreferrer">Google Scholar</a></li>
-        </ul>
-      </section>
-
-      <!-- Speaking & Workshop Topics -->
-      <section class="section">
-        <h2>Speaking and Workshop Topics</h2>
-        <ul>
-          <li>Adolescent blood pressure, kidney health, and long term risk</li>
-          <li>Digital health tools that support sustainable behavior change</li>
-          <li>Youth led sustainability campaigns and climate action</li>
-          <li>Interdisciplinary problem solving at the interface of consulting and medicine</li>
-        </ul>
-      </section>
-
-      <!-- Selected Honors & Fellowships -->
-      <section id="honors" class="section">
-        <h2>Selected Honors and Fellowships</h2>
-        <ul class="honors-list">
-          <li><strong>Ben Franklin Scholar</strong> - University of Pennsylvania, Integrated Studies humanities curriculum.</li>
-          <li><strong>Penn Data Science Fellow</strong> - Penn Arts and Sciences Data Driven Discovery, supporting ABPM and white coat hypertension research.</li>
-          <li><strong>Grant for Faculty Mentoring Undergraduate Research (CURF GfFMUR)</strong> - funded ABPM data extraction and analysis in the CHOP Department of Nephrology.</li>
-          <li><strong>Atlantis Education Abroad Merit Scholarship Recipient</strong> - full merit funding for clinical shadowing at ULS Santa Maria in Lisbon, Portugal.</li>
-          <li><strong>Bank of America Student Leader</strong> - recognized for community impact and youth leadership.</li>
-          <li><strong>Coca-Cola Scholars Regional Finalist</strong> - selected as a regional finalist for the Coca-Cola Scholars program.</li>
-          <li><strong>National Beta Service Scholarship Recipient</strong> - awarded for sustained service and leadership in National Beta Club.</li>
-          <li><strong>ClimateScience Olympiad - 2 time semifinalist</strong> - advanced in global climate problem solving competition.</li>
-          <li><strong>National Merit Commended Scholar</strong> - one of 34,000 students recognized nationwide.</li>
-          <li><strong>Top 150 internationally</strong> - Wharton Global High School Investment Competition.</li>
-          <li><strong>Gold Presidential Volunteer Service Award</strong> - recognized for more than 250 hours of service.</li>
-          <li><strong>15 time Science Olympiad medalist</strong> - 5 state medals and 10 regional or invitational medals in North Carolina Science Olympiad.</li>
-          <li><strong>2nd Place, Bain x GRC Case Competition</strong> - team placed second out of more than 60 teams and 300 participants.</li>
-        </ul>
-      </section>
-
-      <!-- Research Highlights -->
-      <section id="highlights" class="section">
-        <h2>Research Highlights and Media Mentions</h2>
-        <ul>
-          <li>
-            <strong>Factors Associated with White Coat Hypertension</strong> -
-            study of pre-referral risk factors for pediatric white coat hypertension using ABPM data, presented at the
-            CURF Fall Research Expo and hosted in Penn's ScholarlyCommons.
-          </li>
-          <li>
-            <strong>Teaching Calibration in the Geosciences</strong> -
-            article in <em>In the Trenches</em> summarizing calibration based field techniques and how students learn to
-            connect sensor measurements to real environmental questions.
-          </li>
-          <li>
-            <strong>Our Beautiful Earth and solar fundraising</strong> -
-            youth led platform and solar campaign that raised 9K USD for school solar panels and helped spark local
-            conversations about climate resilience in Wilmington, North Carolina.
-          </li>
-        </ul>
-      </section>
-
-      <!-- Coursework placeholder -->
-      <section id="coursework" class="section">
-        <h2>Selected Coursework</h2>
-        <ul>
-          <li>Health Care Systems (HCMG 1010)</li>
-          <li>Health and Societies: Global Perspectives (HSOC 0480)</li>
-          <li>Integrated Studies seminars through the Ben Franklin Scholars program</li>
-          <li>Statistics, data science, and programming courses supporting clinical research analytics</li>
-        </ul>
-      </section>
-
-      <!-- Contact -->
-      <section id="contact" class="section">
-        <h2>Contact</h2>
-        <p>
-          Sheel is always excited to collaborate on projects at the intersection of strategy, medtech, and clinical
-          research, especially those focused on kidney disease, adolescent health, or sustainability in healthcare.
-        </p>
-        <ul>
-          <li>Email - <a href="mailto:sheelp@sas.upenn.edu">sheelp@sas.upenn.edu</a></li>
-          <li>LinkedIn - <a href="https://www.linkedin.com/in/sheelpatelnc" target="_blank" rel="noreferrer">linkedin.com/in/sheelpatelnc</a></li>
-        </ul>
-      </section>
-
-      <div class="footer">
-        © 2025 Sheel Patel. All rights reserved.
-      </div>
-    </main>
-  </div>
-</body>
-</html>
+        Health and Societies with a concentration in Healthca
