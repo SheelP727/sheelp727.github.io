@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <title>Sheel Patel | Strategy, MedTech, Clinical Research</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!-- Clean, academic font -->
-  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <!-- Clean, academic fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
   <style>
     * {
       box-sizing: border-box;
@@ -14,45 +14,48 @@
     html, body {
       margin: 0;
       padding: 0;
-      font-family: "Source Sans 3", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: #f5f5f5;
-      color: #111111;
+      font-family: "Source Sans 3", "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #020617 0, #020617 40%, #000000 100%);
+      color: #e5e7eb;
       scroll-behavior: smooth;
     }
 
     a {
-      color: #111111;
+      color: #bae6fd;
       text-decoration: none;
       border-bottom: 1px solid transparent;
+      transition: border-color 0.15s ease, color 0.15s ease;
     }
 
     a:hover {
-      border-bottom-color: #111111;
+      border-bottom-color: #bae6fd;
+      color: #e0f2fe;
     }
 
-    /* Scroll progress bar (cool feature) */
+    /* Scroll progress bar */
     .progress-container {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       height: 3px;
-      background: #e5e5e5;
+      background: #020617;
       z-index: 50;
     }
 
     .progress-bar {
       height: 100%;
       width: 0;
-      background: #111111;
+      background: linear-gradient(90deg, #38bdf8, #22c55e);
       transform-origin: left center;
     }
 
     /* Top nav */
     .top-nav {
       width: 100%;
-      background: #ffffff;
-      border-bottom: 1px solid #e5e5e5;
+      background: rgba(15, 23, 42, 0.96);
+      border-bottom: 1px solid #1f2937;
+      backdrop-filter: blur(18px);
       position: sticky;
       top: 3px; /* below progress bar */
       z-index: 40;
@@ -70,36 +73,39 @@
 
     .top-nav-title {
       font-weight: 600;
-      letter-spacing: 0.03em;
-      font-size: 15px;
+      letter-spacing: 0.05em;
+      font-size: 14px;
       text-transform: uppercase;
+      color: #e5e7eb;
     }
 
     .top-nav-links {
       display: flex;
-      gap: 16px;
-      font-size: 14px;
+      gap: 14px;
+      font-size: 13px;
       flex-wrap: wrap;
     }
 
     .top-nav-links a {
-      padding: 4px 8px;
+      padding: 4px 10px;
       border-radius: 999px;
+      color: #cbd5f5;
+      border-bottom-color: transparent;
     }
 
     .top-nav-links a:hover {
-      background: #f0f0f0;
-      border-bottom-color: transparent;
+      background: rgba(15, 23, 42, 0.9);
+      color: #f9fafb;
     }
 
     /* Layout */
     .page {
       max-width: 1120px;
       margin: 0 auto;
-      padding: 24px 16px 56px;
+      padding: 26px 16px 56px;
       display: grid;
-      grid-template-columns: 260px minmax(0, 1fr);
-      gap: 32px;
+      grid-template-columns: 270px minmax(0, 1fr);
+      gap: 30px;
     }
 
     @media (max-width: 880px) {
@@ -110,11 +116,11 @@
 
     /* Sidebar */
     .sidebar {
-      background: #ffffff;
-      border-radius: 10px;
+      background: radial-gradient(circle at top left, rgba(15, 118, 110, 0.2), #020617);
+      border-radius: 14px;
       padding: 24px 20px 20px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
-      border: 1px solid #e5e5e5;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.65);
+      border: 1px solid #1f2937;
     }
 
     .avatar-shell {
@@ -128,7 +134,8 @@
       height: 150px;
       border-radius: 50%;
       overflow: hidden;
-      border: 3px solid #000000;
+      border: 3px solid #f9fafb;
+      box-shadow: 0 14px 35px rgba(0, 0, 0, 0.8);
     }
 
     .avatar img {
@@ -141,29 +148,39 @@
 
     .sidebar-name {
       text-align: center;
-      font-size: 20px;
+      font-size: 22px;
       font-weight: 700;
       margin-bottom: 4px;
+      letter-spacing: 0.02em;
+    }
+
+    .sidebar-email-title {
+      text-align: center;
+      font-size: 13px;
+      margin-bottom: 14px;
+    }
+
+    .sidebar-email-title a {
+      color: #e5e7eb;
+      border-bottom-color: #475569;
+    }
+
+    .sidebar-email-title a:hover {
+      border-bottom-color: #e5e7eb;
     }
 
     .sidebar-subtitle {
       text-align: center;
       font-size: 13px;
-      color: #555555;
-      margin-bottom: 16px;
-      line-height: 1.5;
-    }
-
-    .sidebar-email {
-      text-align: center;
-      font-size: 13px;
-      margin-bottom: 16px;
+      color: #9ca3af;
+      margin-bottom: 18px;
+      line-height: 1.6;
     }
 
     .sidebar-links {
       text-align: center;
       margin-bottom: 18px;
-      font-size: 14px;
+      font-size: 13px;
     }
 
     .sidebar-links a {
@@ -171,15 +188,26 @@
       align-items: center;
       gap: 6px;
       margin: 0 6px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid #1f2937;
+      color: #e5e7eb;
+      border-bottom-color: transparent;
+    }
+
+    .sidebar-links a:hover {
+      background: rgba(15, 23, 42, 1);
+      border-color: #334155;
     }
 
     .sidebar-section-title {
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 600;
       margin: 18px 0 6px;
       text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: #666666;
+      letter-spacing: 0.12em;
+      color: #6b7280;
     }
 
     .sidebar-list {
@@ -187,7 +215,7 @@
       padding: 0;
       margin: 0;
       font-size: 13px;
-      color: #333333;
+      color: #d1d5db;
       line-height: 1.5;
     }
 
@@ -197,35 +225,37 @@
 
     .sidebar-badge {
       display: inline-block;
-      margin-top: 12px;
+      margin-top: 14px;
       font-size: 11px;
-      padding: 4px 10px;
+      padding: 6px 12px;
       border-radius: 999px;
-      border: 1px solid #111111;
+      border: 1px solid #475569;
+      color: #e5e7eb;
+      background: rgba(15, 23, 42, 0.9);
     }
 
     /* Main content */
     .content {
-      background: #ffffff;
-      border-radius: 10px;
+      background: radial-gradient(circle at top right, rgba(59, 130, 246, 0.15), #020617);
+      border-radius: 14px;
       padding: 24px 22px 26px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
-      border: 1px solid #e5e5e5;
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.85);
+      border: 1px solid #111827;
     }
 
     .intro {
       font-size: 14px;
-      color: #333333;
+      color: #d1d5db;
       margin-bottom: 20px;
-      line-height: 1.6;
+      line-height: 1.7;
     }
 
     h2 {
       font-size: 17px;
-      border-bottom: 1px solid #e5e5e5;
+      border-bottom: 1px solid #1f2937;
       padding-bottom: 4px;
       margin: 22px 0 10px;
-      color: #111111;
+      color: #f9fafb;
       font-weight: 600;
     }
 
@@ -233,11 +263,12 @@
       font-size: 15px;
       margin: 14px 0 4px;
       font-weight: 600;
+      color: #e5e7eb;
     }
 
     .section {
       font-size: 14px;
-      color: #333333;
+      color: #d1d5db;
       line-height: 1.6;
     }
 
@@ -250,26 +281,21 @@
       margin-bottom: 6px;
     }
 
-    .two-col {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr);
-      gap: 10px;
-    }
-
     .entry-meta {
-      font-size: 13px;
-      color: #555555;
+      font-size: 12px;
+      color: #9ca3af;
     }
 
     .tagline-strong {
       font-weight: 600;
+      color: #f9fafb;
     }
 
     .honors-list li {
       margin-bottom: 6px;
     }
 
-    /* Back to top button (part of cool feature) */
+    /* Back to top button */
     .back-to-top {
       position: fixed;
       right: 18px;
@@ -277,13 +303,14 @@
       padding: 7px 12px;
       font-size: 12px;
       border-radius: 999px;
-      border: 1px solid #111111;
-      background: #ffffff;
-      color: #111111;
+      border: 1px solid #64748b;
+      background: rgba(15, 23, 42, 0.96);
+      color: #e5e7eb;
       cursor: pointer;
       opacity: 0;
       pointer-events: none;
-      transition: opacity 0.2s ease, transform 0.2s ease;
+      transition: opacity 0.2s ease, transform 0.2s ease, background 0.2s ease;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
     }
 
     .back-to-top.visible {
@@ -296,10 +323,14 @@
       transform: translateY(8px);
     }
 
+    .back-to-top:hover {
+      background: rgba(15, 23, 42, 1);
+    }
+
     .footer {
       margin-top: 18px;
       font-size: 12px;
-      color: #777777;
+      color: #9ca3af;
       text-align: right;
     }
   </style>
@@ -337,14 +368,14 @@
       </div>
 
       <div class="sidebar-name">Sheel Patel</div>
+      <div class="sidebar-email-title">
+        <a href="mailto:sheelp@sas.upenn.edu">sheelp@sas.upenn.edu</a>
+      </div>
+
       <div class="sidebar-subtitle">
         UPenn '28 · Ben Franklin Scholar<br />
         Health &amp; Societies (Healthcare Markets &amp; Finance)<br />
         Nutrition Science · Chemistry minor
-      </div>
-
-      <div class="sidebar-email">
-        <a href="mailto:sheelp@sas.upenn.edu">sheelp@sas.upenn.edu</a>
       </div>
 
       <div class="sidebar-links">
@@ -379,9 +410,9 @@
           I am an undergraduate at the University of Pennsylvania and a Ben Franklin Scholar in the College of
           Arts &amp; Sciences. I study <span class="tagline-strong">Health and Societies</span> with a concentration in
           Healthcare Markets and Finance, along with <span class="tagline-strong">Nutrition Science</span> and a
-          <span class="tagline-strong">Chemistry</span> minor. My work lives at the intersection of
-          strategy, medtech, and clinical research, with a particular interest in pediatric hypertension, kidney
-          disease, and how digital tools can support proactive, equitable care.
+          <span class="tagline-strong">Chemistry</span> minor. My work lives at the intersection of strategy,
+          medtech, and clinical research, with a particular interest in pediatric hypertension, kidney disease, and
+          how digital tools can support proactive, equitable care.
         </p>
         <p class="intro">
           I split my time between the clinic and the whiteboard: analyzing ambulatory blood pressure data at CHOP,
